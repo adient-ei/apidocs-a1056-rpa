@@ -6,13 +6,13 @@ servers:
 - url: https://apigatewayqa.adient.com/rpa/v1
   description: Quality
 paths:
-  /workitems:
+  /bankdetails:
     post:
       tags:
-      - WorkItems
-      summary: Send workitems to RPA queues
-      description: Send workitems to RPA
-      operationId: workitems
+      - Send Bank Details (new/changes) to RPA 
+      summary: Bank Information Synchronization
+      description: When this API is trigered, an RPA process will take the information, pull relevant data from Taulia for the Supplier/Bank details and sync to Snowflake
+      operationId: bankdetails
       requestBody:
         required: true
         content:

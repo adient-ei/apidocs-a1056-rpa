@@ -3,8 +3,27 @@ info:
   title: RPA APIs
   version: 1.0.0
 servers:
-- url: https://apigatewayqa.adient.com/rpa/v1
-  description: Quality
+  - url: 'https://apigatewaydev.adient.com/rpa/v1'
+    description: Development
+    variables:
+      scheme:
+        enum:
+          - https
+        default: https
+  - url: 'https://apigatewayqa.adient.com/rpa/v1'
+    description: Quality
+    variables:
+      scheme:
+        enum:
+          - https
+        default: https
+  - url: 'https://apigateway.adient.com/rpa/v1'
+    description: Production
+    variables:
+      scheme:
+        enum:
+          - https
+        default: https
 paths:
   /bankdetails:
     post:
